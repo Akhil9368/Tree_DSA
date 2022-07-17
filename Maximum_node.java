@@ -13,3 +13,11 @@ void maximum(binary<Integer> root) {
                 s1.push(root.right);
             }
         }
+        while (!s2.isEmpty()) {
+            int t1 = s2.pop();
+            if (t1 > max) {
+                max = t1;
+            }
+        }
+        System.out.println(max);
+    }
