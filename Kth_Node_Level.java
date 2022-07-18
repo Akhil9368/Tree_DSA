@@ -19,3 +19,12 @@ void KthNode(binary<Integer> root,int k){
           level++;
       }
   }
+// Recursively
+ void Kth_Node_Recursive(binary<Integer> root ,int level,int k){
+        if(root == null){return;}
+        if(level == k){
+            System.out.print(root.data + " ");
+        }
+        Kth_Node_Recursive(root.left,level+1,k);
+        Kth_Node_Recursive(root.right,level+1,k);
+  }
